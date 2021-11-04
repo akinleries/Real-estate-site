@@ -6,7 +6,7 @@ import ImageFour from '../Images/house-4.jpg';
 
 export const SliderDataOne = [
     {
-        title: 'House in Lekki, lagos',
+        title: 'House in Lekki, lagos.',
         price: '$5,000,000',
         path: '/homes',
         image: ImageOne,
@@ -15,7 +15,7 @@ export const SliderDataOne = [
     },
 
     {
-        title: 'House in CanaanCity, Canaanland',
+        title: 'House in CanaanCity, Canaanland , otta..',
         price: '$9,000,000',
         path: '/homes',
         image: ImageTwo,
@@ -24,7 +24,7 @@ export const SliderDataOne = [
     },
 
     {
-        title: 'House in Victoria island, lagos',
+        title: 'House in Victoria island, lagos.',
         price: '$15,000,000',
         path: '/homes',
         image: ImageThree,

@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import styled, {css} from 'styled-components/macro';
 import {Link} from 'react-router-dom';
 import { menuData } from '../Data/MenuData';
@@ -8,7 +8,7 @@ import {FaBars} from 'react-icons/fa';
 
 
 const Nav = styled.nav`  
-    background : red;
+    
     display: flex;
     height : 80px;
     padding-top: 2rem;
@@ -19,13 +19,14 @@ const Nav = styled.nav`
 `;
 
 const NavLink = css`
-    color: #fff;
+    color: white;
     display: flex;
-    align-item: center;
+    align-items: center;
     padding: 0 1rem;
     height: 100%;
-    cursor; pointer;
+    cursor: pointer;
     text-decoration: none;
+    
     
 `;
 
@@ -33,6 +34,8 @@ const Logo = styled(Link)`
     ${NavLink}
     font-style: italic;
     margin-left: 40px;
+    font-size: 30px;
+    line-height: 13px;
 `;
 
 const NavMenu = styled.div`
@@ -57,6 +60,15 @@ const MenuBar = styled(FaBars)`
 `;
 
 const NavMenuLinks = styled(Link)`
+    font-weight : bold;
+    font-size : 20px;
+    background-color : #5e5854;
+    margin-right : 30px;
+    width : 200%;
+    padding-top : 40px;
+    margin-top : -20px;
+    border-radius : 5px;
+     
     ${NavLink}
 `;
 
@@ -77,7 +89,7 @@ const NavBtn = styled.div`
 
 
 
-const NavBar = () => {
+const NavBar = ({toggle}) => {
   return (
     <div>
      <Nav>
@@ -85,7 +97,7 @@ const NavBar = () => {
     
              <MenuBar/>
          
-        <NavMenu>
+        <NavMenu onClick = {toggle}>
             {menuData.map((item, index) => (
                 <NavMenuLinks to={item.link}  key={index}>{item.title}</NavMenuLinks>
             ))}
